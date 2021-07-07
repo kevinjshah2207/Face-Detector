@@ -44,8 +44,13 @@ while True:
     cv2.imshow('Face Detector Example', frame)
 
     # Key to keep image displayed so that we can see it until we press any button
-    cv2.waitKey(1)
+    key = cv2.waitKey(1)
 
+    #Press q or Q to exit the webcam
+    if key == 81 or key == 113:
+        break
 
+#Release webcam
+webcam.release()
 
 print("Code Completed")
